@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --primairy-color: rgba(255, 136, 0, 0.829);
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  position: relative;
+}
+
+header {
+  height: 10vh;
+  width: 100%;
+  background-color: #888;
+  text-align: center;
+}
+.container {
+  margin: auto 20px;
+  padding: 15px 20px;
+}
+header .container .logo {
+  text-align: center;
+  font-weight: 700;
+}
+header .container .logo h2 {
+  color: white;
+  text-align: start;
+}
+header .container .logo h2 span {
+  color: var(--primairy-color);
+}
+.cards {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.cards .card {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  padding: 10px;
+  /* flex-direction: column; */
+}
+input {
+  width: 40px;
+}
+i {
+  color: var(--primairy-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: 5px;
+}
+.selected {
+  color: none;
+  padding-top: 50px;
+}
+.totle {
+  padding: 20px 30px;
+  border-top: 2px solid;
+  text-align: end;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: flex-end;
+}
+.active {
+  opacity: 0.5;
+  color: red;
+}
+.card .totle {
+  display: flex;
+}
+.card .totle h3 {
+  font-size: 0.8rem;
+}
