@@ -7,6 +7,7 @@ function handelclik(even) {
   let del = even.target;
   // console.log(del);
   del.parentElement.parentElement.remove();
+
   update();
   handelchange();
 }
@@ -14,8 +15,12 @@ let quute = document.querySelectorAll("input");
 quute.forEach((el) => {
   el.addEventListener("change", handelchange);
 });
-function handelchange() {
-  update();
+function handelchange(el) {
+  if (el.target.value < 0) {
+    el.target.value = 0;
+  } else {
+    update();
+  }
 }
 
 function update() {
@@ -32,8 +37,8 @@ function update() {
     ele.querySelector(".totale_price").innerText = totale;
 
     globale += totale;
-    document.querySelector(".global_price").innerText = globale;
   });
+  document.querySelector(".global_price").innerText = globale;
 }
 
 let selected = document.querySelectorAll(".selected");
@@ -45,7 +50,7 @@ function handel(elem) {
   elem.target;
   // console.log(elem.target);
   // elem.target.parentElement.classlist;
-  if (elem.target.parentElement.parentElement.classList.contains("active")) {
-    elem.target.parentElement.parentElement.classList.remove("active");
-  } else elem.target.parentElement.parentElement.classList.add("active");
+  if (elem.target.classList.contains("active")) {
+    elem.target.classList.remove("active");
+  } else elem.target.classList.add("active");
 }

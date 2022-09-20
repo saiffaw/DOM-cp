@@ -78,7 +78,6 @@ i {
   justify-content: flex-end;
 }
 .active {
-  opacity: 0.5;
   color: red;
 }
 .card .totle {
